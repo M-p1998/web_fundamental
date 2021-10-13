@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappearing Ninja</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var htmlString = "";
+        for(var i = 0; i < 8; i++){
+            htmlString += '<img src="anime.jpeg" alt="anime">'
+        }
+        // htmlString += '<button>Restore</button>'
+        $(document).ready(function(){
+            $(".container").append(htmlString)
+
+            $("img").click(function(){
+                $(this).hide("slow")
+            })
+            $("button").click(function(){
+                $("img").show();
+            
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>JQuery - assignment 1</h2> 
+    <div class="container">
+        
+    </div>  
+    <div>
+        <button>Restore</button>
+    </div> 
+</body>
+</html>
